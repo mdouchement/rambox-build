@@ -39,19 +39,19 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ${{ github.workspace }}/dist/Rambox-*-linux-amd64.deb
-            ${{ github.workspace }}/dist/Rambox-*-linux-i386.deb
-            ${{ github.workspace }}/dist/Rambox-*-linux-amd64.snap
-            ${{ github.workspace }}/dist/Rambox-*-linux-x86_64.AppImage
-            ${{ github.workspace }}/dist/Rambox-*-linux-i386.AppImage
-            ${{ github.workspace }}/dist/Rambox-*-linux-x86_64.rpm
-            ${{ github.workspace }}/dist/Rambox-*-linux-i686.rpm
-            ${{ github.workspace }}/dist/Rambox-*-linux-x64.tar.gz
-            ${{ github.workspace }}/dist/Rambox-*-linux-ia32.tar.gz
-            ${{ github.workspace }}/dist/Rambox-*-linux-x64.zip
-            ${{ github.workspace }}/dist/Rambox-*-linux-ia32.zip
-            ${{ github.workspace }}/dist/latest-linux.yml
-            ${{ github.workspace }}/dist/latest-linux-ia32.yml
+            dist/Rambox-*-linux-amd64.deb
+            dist/Rambox-*-linux-i386.deb
+            dist/Rambox-*-linux-amd64.snap
+            dist/Rambox-*-linux-x86_64.AppImage
+            dist/Rambox-*-linux-i386.AppImage
+            dist/Rambox-*-linux-x86_64.rpm
+            dist/Rambox-*-linux-i686.rpm
+            dist/Rambox-*-linux-x64.tar.gz
+            dist/Rambox-*-linux-ia32.tar.gz
+            dist/Rambox-*-linux-x64.zip
+            dist/Rambox-*-linux-ia32.zip
+            dist/latest-linux.yml
+            dist/latest-linux-ia32.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: matrix.job_name == 'linux'
@@ -65,10 +65,10 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ${{ github.workspace }}/dist/Rambox-*-mac-universal.zip
-            ${{ github.workspace }}/dist/Rambox-*-mac-universal.dmg
-            ${{ github.workspace }}/dist/Rambox-*-mac-universal.dmg.blockmap
-            ${{ github.workspace }}/dist/latest-mac.yml
+            dist/Rambox-*-mac-universal.zip
+            dist/Rambox-*-mac-universal.dmg
+            dist/Rambox-*-mac-universal.dmg.blockmap
+            dist/latest-mac.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: matrix.job_name == 'osx'
@@ -82,11 +82,11 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ${{ github.workspace }}/dist/Rambox-*-win.exe
-            ${{ github.workspace }}/dist/Rambox-*-win-x64.zip
-            ${{ github.workspace }}/dist/Rambox-*-win-ia32.zip
-            ${{ github.workspace }}/dist/Rambox-*-win.exe.blockmap
-            ${{ github.workspace }}/dist/latest.yml
+            dist/Rambox-*-win.exe
+            dist/Rambox-*-win-x64.zip
+            dist/Rambox-*-win-ia32.zip
+            dist/Rambox-*-win.exe.blockmap
+            dist/latest.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: matrix.job_name == 'win'
